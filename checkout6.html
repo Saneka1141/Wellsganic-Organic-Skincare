@@ -47,7 +47,7 @@
 						<td></td>
 						<td></td>
 						<td></td>
-						<td class="text-right">SubTotal: <strong class="subtotal"></strong><br>Shipping: <strong class="ship">$3.75</strong><br>Total: <strong class="total"></strong></td>
+						<td class="text-right">SubTotal: <strong class="subtotal"></strong><br>Shipping: <strong class="ship">£3.75</strong><br>Total: <strong class="total"></strong></td>
 						<td></td>
 					</tfoot>
 				</table>
@@ -190,14 +190,14 @@
 						<td onclick="addCounter(${item.quantity})">${item.quantity}</td>
 						<td></td>
 						<td></td>
-						<td class="text-right">$${item.price}</td>
+						<td class="text-right">£${item.price}</td>
 						
 					</tr>`).join("")
             var totalInt=parseFloat(cartLS.total());
             var totalInt1=totalInt + 3.75;
-           var state= $subtotal.innerHTML = "$" + cartLS.total();
-            $total.innerHTML = "$" + totalInt1;
-            var check="$0";
+           var state= $subtotal.innerHTML = "£" + cartLS.total();
+            $total.innerHTML = "£" + totalInt1;
+            var check="£0";
             if(state != check){
                 document.getElementById("checkout").style.display="block";
             }else{document.getElementById("checkout").style.display="none";}
